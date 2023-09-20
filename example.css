@@ -1,0 +1,143 @@
+h1 {
+    margin: 15px 0 0;
+    font-size: 12px;
+    font-style: italic ;
+    line-height: 1.0;
+
+}
+.text-center {
+  text-align: center;
+}
+
+h2 {
+    text-align: center;
+    font-size: 13px;
+    font-style: normal;
+    line-height: 1.3;
+}
+
+
+.paint{
+  background-image:url("./Desktop/paint.png");/*画像のURLを指定*/
+  background-size:contain; /*画像のサイズを指定*/
+  width: 62.5%; /*横幅サイズ*/
+  height:300px;/*立幅サイズ*/
+}
+
+.anime {
+    animation-name: fadeInAnime;/*アニメーションの定義名*/
+    animation-fill-mode:backwards;/*アニメーションの開始forwordと終了時backwordの状態を指定*/
+    animation-duration:3s;/*アニメーション変化時間 ※デフォルト*//* アニメーション１回分の時間の長さを指定するCSS*/
+    animation-iteration-count:1;/*infinite;無限ループ */
+    animation-timing-function:ease;/*001*//* アニメーションの進行具合を操作するCSS*//*緩やかや急激に変化している*/
+    animation-delay: 0.5s;/* アニメーションの開始を遅らせるCSS*/
+    animation-direction:normal;/* アニメーション１回分の時間の長さを指定するCSS*ノーマル無効*/
+    }
+
+    
+
+    .anime2 {
+      animation-name: fadeUpAnime;
+      animation-duration:1s;
+      animation-fill-mode:forwards;
+      animation-delay: 2.5s;
+      animation-iteration-count:1;
+
+      opacity:0;
+      }
+
+ 
+
+       /*アニメーションの開始から終了までを指定する*/
+@keyframes fadeUpAnime{
+  from {
+    opacity: 0;
+  transform: translateY(100px);/*立てに下から上に垂直に指定の場所に着地する*/
+  }
+
+  to {
+    opacity: 1;
+  transform: translateY(0);/*立てに下から上に垂直に指定場所まで動く*/
+  }
+}
+@keyframes fadeInAnime{
+    0% {
+      opacity: 0;
+      /*画像をバックフラッシュ*/
+    }
+   /*画像をバックフラッシュ終了*/
+    100% {
+      opacity: 1;
+    }
+  }
+
+  /*  */
+.anime3{
+  animation-name: fftAnime;
+  animation-duration:1s;
+  animation-delay: 3.5s;
+  animation-fill-mode:forwards;
+  perspective-origin: left center;
+  /* ・・・要素の基点を指定する。
+
+transform-origin:(X軸の位置,Y軸の位置,Z軸の位置);
+
+要素の中心の初期値は
+2Dの場合50%, 50%
+3Dの場合50%, 50%, 0
+
+記述例： transform-origin:(50px,50px);
+　　　　transform-origin:(center,center);
+　　　　transform-origin:(left); */
+  opacity:0;
+  }
+  /*左から右へパタッとする */
+  @keyframes fftAnime{
+    from {
+     transform: perspective(600px) translate3d(0, 0, 0) rotateY(30deg);
+    opacity: 0;
+    }
+  
+    to {
+    transform: perspective(600px) translate3d(0, 0, 0) rotateY(0deg);
+    opacity: 1;
+    }
+  }
+  
+
+  p{
+    text-align: center;
+    margin: 20px 0;
+    font-size:1.5rem;
+  }
+  
+  
+  /*========= 1文字ずつ出現させるためのCSS ===============*/
+  
+  .eachTextAnime span{opacity: 0;}
+  .eachTextAnime.appeartext span{ animation:text_anime_on 1s ease-out forwards; }
+
+  @keyframes text_anime_on {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+  .box{
+    width: 220px;
+    padding: 20px;
+    margin:0 60px 60px 0;
+    background: #666;
+    color: #fff;
+    box-sizing:border-box;
+    text-align: center;
+  
+  
+    line-height: 1.3; 
+  }
+/*001 
+  開始時と終了時が緩やかに変化（ease）
+  開始時は緩やかに変化、終了に近づくと早く変化（ease-in）
+  開始時は早く変化し、終了時は緩やかに変化（ease-out）
+  開始時と終了時は、かなり緩やかに変化（ease-in-out）
+ 開始から終了まで一定に変化（linear）
+  パラパラ漫画のように数値をコマ数で変化（steps）
+  変化の進行割合を3次ベジェ曲線で指定（cubic-bezier） */

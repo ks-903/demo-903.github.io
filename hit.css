@@ -1,0 +1,48 @@
+h1 {
+    font-family: serif;
+    /* 明朝のふぉんと
+    font-family : serif;
+    font-family: YuMincho; */
+}
+
+p {
+    font-family: Avenir Next;
+    /* ゴシック体のふぉんと
+    font-family: sans-serif;
+    font-family: "Lucida Grande"; */
+}
+/* font-size:　 */
+/* img{
+    width:500px;
+   height: 200px;
+}
+*/
+
+/* h1 { 
+   width: 500px;
+   height : 80px;
+   background-color: #9de8ea;
+
+ }
+ 
+ img {
+    width: 500px;
+    height: 200px;
+
+    
+    image
+
+ }*/
+
+ /* <img src = "https://prog-8.com/images/wanko.jpg"> */
+
+
+ /* selectedの文字の色を#ff0000にしてください */
+/*  N
+ .selected{
+    color: #ff0000;
+  }
+
+  <li class="selected">
+
+   */
